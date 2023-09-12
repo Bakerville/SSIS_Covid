@@ -1,0 +1,231 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="b016409a-d16e-4ad4-b332-325550b949d8" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Covid 19 DW</ID>
+  <Name>Covid 19 DW</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="ec33ae6e-f669-49cf-98fd-88ec1a81d5b5">
+      <ID>Exposure</ID>
+      <Name>Exposure</Name>
+      <DimensionID>Exposure</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="0c618065-90cb-41fd-a701-8de868f49d01">
+          <AttributeID>ID</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="201caaf6-98a1-4f60-8cb1-153ea72e6d58">
+      <ID>PHU</ID>
+      <Name>PHU</Name>
+      <DimensionID>PHU</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="2410cbdc-cbe0-4ce2-9d0c-cc8741d93a2e">
+          <AttributeID>ID</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="9014a744-d06b-43d4-a68d-19cd5a210d12">
+      <ID>Age</ID>
+      <Name>Age</Name>
+      <DimensionID>Age</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="eaa0d175-a3aa-4a45-809c-f0d69629cf74">
+          <AttributeID>ID</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="79944de2-36eb-4a98-8308-5d49ae3fdc6b">
+      <ID>PHU Info</ID>
+      <Name>PHU Info</Name>
+      <DimensionID>PHU Info</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="11acdcad-9a27-4c5c-88b1-ce583f390294">
+          <AttributeID>ID</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="900b3c1c-a74a-4b56-b926-4a37e5784e6e">
+      <ID>Calendar</ID>
+      <Name>Calendar</Name>
+      <DimensionID>Calendar</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="954ef0d7-c762-482a-9624-023833e8feef">
+          <AttributeID>PK Date</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="b6ea5574-d0a7-47e7-ba0e-a4235bc5a96b">
+      <ID>Reported Cases</ID>
+      <Name>Reported Cases</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="dca92ec5-37c6-44f6-aeb5-967922960466">
+          <ID>ID</ID>
+          <Name>ID</Name>
+          <Source dwd:design-time-name="6c39043f-2feb-4f22-b1a4-502a71eeaf1a">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="efc0adf1-451f-40c3-9c0a-e971ec67cc17">
+              <TableID>dbo_Reported_Cases</TableID>
+              <ColumnID>ID</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="b1319320-2da6-4bb7-9f70-88d65a0d3421">
+          <ID>Reported Cases Count</ID>
+          <Name>Reported Cases Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="55b1ff68-3cc3-49bb-908b-ab6ed5e1f8f4">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="7df3b337-dbe9-438f-88b6-20a7e1af9789">
+              <TableID>dbo_Reported_Cases</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="0151cf64-1a6c-442c-a349-aaca8c3a1c9b">
+          <CubeDimensionID>Exposure</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="36a85d62-cc06-4f96-90a6-90eb0ee26d25">
+              <AttributeID>ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="1c642483-3431-4cf0-95a8-28e356879e03">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="d1461c4b-2681-4685-ad4d-2a617cc47fe2">
+                    <TableID>dbo_Reported_Cases</TableID>
+                    <ColumnID>Exposure_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="a6075e09-a902-42be-984e-81f14b037fb9">
+          <CubeDimensionID>Age</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="3063450d-3425-480d-8cd4-963093b44dd5">
+              <AttributeID>ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="6d1d4b32-78ff-4e76-a797-0d32d78b84af">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="84b43cef-84e4-427a-87df-f7e6589e0417">
+                    <TableID>dbo_Reported_Cases</TableID>
+                    <ColumnID>Age_Group_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="0e027528-fc1d-4112-aa09-d1420395c7a0">
+          <CubeDimensionID>PHU</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="e2437d3e-0b41-4d14-b6d2-1130d2387f1d">
+              <AttributeID>ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="7b7fc4cc-b946-442f-90e3-9d85c50b7d16">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="3c9ac1ea-e89f-4a5b-8608-ce9b22863539">
+                    <TableID>dbo_Reported_Cases</TableID>
+                    <ColumnID>PHU_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="9913bc10-2de8-4401-8f8b-ab3354a6e332">
+          <CubeDimensionID>PHU Info</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="54889c81-e295-4397-ae20-40cfd57840d7">
+              <AttributeID>ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="9364d9bf-e508-4e60-a4e2-79cc987b4b6f">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="318dbafa-223a-46ac-9d85-b7b205753abb">
+                    <TableID>dbo_Reported_Cases</TableID>
+                    <ColumnID>PHU_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="39d46667-3921-4643-9718-d7dc8dcfa5fb">
+          <CubeDimensionID>Calendar</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="174386cb-0612-4de9-8ab2-df34413b30d2">
+              <AttributeID>PK Date</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="ef5a08e5-db49-44c5-8768-0e2569c1099a">
+                  <DataType>Date</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="72906e41-14ae-4fcf-843c-a6e630fc386c">
+                    <TableID>dbo_Reported_Cases</TableID>
+                    <ColumnID>Reported_Date</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="9286376b-fd63-4d06-b90f-d18a44dd8790">
+    <DataSourceViewID>Covid 19 DW</DataSourceViewID>
+  </Source>
+</Cube>
